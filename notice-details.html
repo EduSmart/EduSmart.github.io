@@ -1,0 +1,438 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Notice Details</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+	<script src="js/scroll.js"></script>
+    <style>
+        .clr {
+            font-family: Arial, Helvetica, sans-serif;
+            color: darkslategrey;
+            font-size: 25px;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+            .clr:hover {
+                color: #00AEE0;
+            }
+
+        .clr1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: darkgray;
+            font-size: 18px;
+            justify-content: center;
+        }
+
+
+        .home_banner_area1 {
+            z-index: 1;
+            min-height: 780px;
+            display: flex;
+            position: relative;
+            background: linear-gradient(0deg, white, white), no-repeat scroll center;
+        }
+
+            .home_banner_area1 .banner_inner {
+                position: relative;
+                z-index: 10;
+                width: 100%;
+                display: flex;
+            }
+
+                .home_banner_area1 .banner_inner .container {
+                    vertical-align: middle;
+                    align-self: center;
+                }
+
+                .home_banner_area1 .banner_inner .banner_content {
+                    color: #fff;
+                }
+
+                    .home_banner_area1 .banner_inner .banner_content h2 {
+                        margin-top: 0px;
+                        font-size: 48px;
+                        font-weight: 700;
+                        color: #fff;
+                        line-height: 54px;
+                    }
+
+                    .home_banner_area1 .banner_inner .banner_content p {
+                        max-width: 520px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin: 25px 0px 45px;
+                    }
+
+            .home_banner_area1 .search_course_wrap {
+                margin-top: 40px;
+                margin-bottom: 50px;
+            }
+
+                .home_banner_area1 .search_course_wrap .form_box {
+                    background: rgba(255, 255, 255, 0.15);
+                    max-width: 390px;
+                    padding: 10px 0px;
+                }
+
+        @media (max-width: 470px) {
+            .home_banner_area1 .search_course_wrap .form_box {
+                max-width: 210px;
+                padding: 0;
+            }
+        }
+
+        .home_banner_area1 .search_course_wrap .form-control {
+            height: 50px;
+            background: transparent;
+            padding: 0 20px;
+            border-radius: 0;
+            display: inline-block;
+            border: 0;
+        }
+
+        .home_banner_area1 .search_course_wrap input {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+            .home_banner_area1 .search_course_wrap input.placeholder {
+                color: #ffffff;
+                font-size: 14px;
+            }
+
+            .home_banner_area1 .search_course_wrap input:-moz-placeholder {
+                color: #ffffff;
+                font-size: 14px;
+            }
+
+            .home_banner_area1 .search_course_wrap input::-moz-placeholder {
+                color: #ffffff;
+                font-size: 14px;
+            }
+
+            .home_banner_area1 .search_course_wrap input::-webkit-input-placeholder {
+                color: #ffffff;
+                font-size: 14px;
+            }
+
+            .home_banner_area1 .search_course_wrap input:focus {
+                box-shadow: none;
+            }
+
+        .home_banner_area1 .search_course_wrap .search_course_btn {
+            background: -webkit-linear-gradient(to right, #00aee0 0%, #00fedc 51%, #00aee0 100%);
+            background: -moz-linear-gradient(to right, #00aee0 0%, #00fedc 51%, #00aee0 100%);
+            background: -ms-linear-gradient(to right, #00aee0 0%, #00fedc 51%, #00aee0 100%);
+            background: -o-linear-gradient(to right, #00aee0 0%, #00fedc 51%, #00aee0 100%);
+            background: linear-gradient(to right, #00aee0 0%, #00fedc 51%, #00aee0 100%);
+            background-size: 200% auto;
+            border-radius: 0;
+            color: #fff;
+            position: relative;
+            left: 60px;
+            padding: 10px 35px;
+            border: 0;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+        }
+
+        @media (max-width: 480px) {
+            .home_banner_area1 .search_course_wrap .search_course_btn {
+                padding: 8px 16px;
+                left: 0;
+            }
+        }
+
+        .home_banner_area1 .search_course_wrap .search_course_btn:focus {
+            box-shadow: none;
+        }
+
+        .home_banner_area1 .search_course_wrap .search_course_btn:hover {
+            background-position: right center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-6 col-4 header-top-left">
+                        <a href="tel:+919819973128">
+                            <span class="lnr lnr-phone"></span>
+                            <span class="text">
+                                <span class="text">+919819973128</span>
+                            </span>
+                        </a>
+                        <a href="mailto:parthparakhiya3128@gmail.com">
+                            <span class="lnr lnr-envelope"></span>
+                            <span class="text">
+                                <span class="text">parthparakhiya3128@gmail.com</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-8 header-top-right">
+                        <a href="notice.html" class="text-uppercase">Notice</a>
+                        <a href="scholarship.html" class="text-uppercase">Scholarship</a>
+                        <a href="login.html" class="text-uppercase">Login</a>
+                        <a href="register.html" class="text-uppercase">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_menu">
+            <div class="search_input" id="search_input_box">
+                <div class="container">
+                    <form class="d-flex justify-content-between" method="" action="">
+                        <input type="text" class="form-control" id="search_input" placeholder="Search Here">
+                        <button type="submit" class="btn"></button>
+                        <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+                    </form>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Events</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="event-details.html">Event Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Courses</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="course-details.html">Course Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="notice.html">Notice</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="notice-details.html">Notice Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="teacher.html">Teacher</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="teacher-details.html">Teacher Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="scholarship.html">Scholarship</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link search" id="search">
+                                    <i class="lnr lnr-magnifier"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================ End Header Menu Area =================-->
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="banner_content text-center">
+                            <h2>Notice</h2>
+                            <p>
+                                In the history of modern astronomy, there is probably no one greater leap forward than
+                                the
+                                building and launch of the space telescope known as the Hubble.
+                            </p>
+                            <div class="page_link">
+                                <a href="index.html">Home</a>
+                                <a href="notice.html">Notice</a>
+                                <a href="notice-details.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+    <!--================ Start Home Banner Area =================-->
+    <section class="home_banner_area1">
+        <div class="banner_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="banner_content">
+                            <p style="font-size:52px; font-family:Arial, Helvetica, sans-serif;  color:#00AEE0;">
+                                Teaching Materials<br /><br />and Testing Methods
+                            </p>
+                        </div>
+                    </div>
+                    <p style="font-size:18px; font-family:'Times New Roman'; color:darkslategray;">
+                        Lorem ipsum dolor sit amet, lectus molestie amet eget varius nulla ultricies, senectus vehicula wisi risus tellus nonummy. Urna volutpat, nunc doloremque risus felis lorem risus. Et suspendisse diam libero pulvinar, tristique ac cras luctus ornare. Quam justo. Non ligula turpis sem, velit dolor luctus venenatis. Eros eget at vitae, wisi diam ut ad convallis, in gravida nunc inceptos sed leo donec, duis dolorem adipiscing arcu facilisis. Purus lorem vulputate et condimentum in felis, porttitor accumsan id bibendum diam varius, lorem diam molestie erat a amet urna, dolor pellentesque lectus justo adipiscing. Laoreet est velit vestibulum, laoreet luctus bibendum sed ornare amet elementum, ullamcorper nibh in sollicitudin donec arcu lorem.<br /><br />
+
+                        Quam justo. Non ligula turpis sem, velit dolor luctus venenatis. Eros eget at vitae, wisi diam ut ad convallis, in gravida nunc inceptos sed leo donec, duis dolorem adipiscing arcu facilisis. Purus lorem vulputate et condimentum in felis, porttitor accumsan id bibendum diam varius, lorem diam molestie erat a amet urna, dolor pellentesque lectus justo adipiscing. Laoreet est velit vestibulum, laoreet luctus bibendum sed ornare amet elementum, ullamcorper nibh in sollicitudin donec arcu lorem.<br /><br />
+
+                    </p>
+                    <ul style="font-size:18px; font-family:'Times New Roman'; color:darkslategray;">
+                        <li>Digital Access to Scholarship at Smart institutes</li>
+                        <li>Smart research programs and departments</li>
+                        <li>Smart-affiliated hospitals and research</li>
+                        <li>Smart Catalyst</li>
+                        <li>Smart Library Portal</li>
+                        <li>Smart research programs and departments</li>
+                    </ul>
+                    <div class="search_course_wrap">
+                        <button type="submit" class="btn search_course_btn">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Home Banner Area =================-->
+    <!--================ Start footer Area  =================-->
+    <footer class="footer-area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Top Products</h4>
+                    <ul>
+                        <li><a href="#">Managed Website</a></li>
+                        <li><a href="#">Manage Reputation</a></li>
+                        <li><a href="#">Power Tools</a></li>
+                        <li><a href="#">Marketing Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Experts</a></li>
+                        <li><a href="#">Agencies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 single-footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>You can trust us. we only send promo offers,</p>
+                    <div class="form-wrap" id="mc_embed_signup">
+                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                              method="get" class="form-inline">
+                            <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'"
+                                   required="" type="email">
+                            <button class="click-btn btn btn-default">
+                                <span>subscribe</span>
+                            </button>
+                            <div style="position: absolute; left: -5000px;">
+                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                            </div>
+
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+                    Copyright ©
+                    <script>
+                        var CurrentYear = new Date().getFullYear()
+                        document.write(CurrentYear)
+                    </script>  All rights reserved | <a href="#">EduSmart</a> | | <a href="#"> ParFer Tech</a></p>
+				<div class="col-lg-4 col-sm-12 footer-social">
+					<a href="https://www.facebook.com/parth.parakhiya.92"><i class="fa fa-facebook"></i></a>
+					<a href="https://mobile.twitter.com/parth_parakhiya"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/parth_2908_parakhiya/"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/mwlite/in/parth-parakhiya-30b8b5199"><i class="fa fa-linkedin"></i></a>
+		            <a title="Back to Top" onclick="scrollToTop()"; style="height:45px; width:45px; margin-left:5px; transition:250ms ease; border:1px solid #00AEE0;"><i class="fa fa-arrow-circle-up"></i></a>
+				</div>
+            </div>
+        </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/owl-carousel-thumb.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.js"></script>
+    <script src="js/mail-script.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

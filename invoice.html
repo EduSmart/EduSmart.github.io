@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<title>Invoice</title>
+    <style>
+* { margin: 0; padding: 0; }
+body { font: 14px/1.4 Georgia, serif; }
+#page-wrap { width: 800px; margin: 0 auto; background-color:white;}
+
+textarea { border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+table td, table th { border: 1px solid black; padding: 5px; }
+
+#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px Helvetica, Sans-Serif; text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }
+
+#address { width: 250px; height: 150px; float: left; }
+#customer { overflow: hidden; }
+
+#logo { text-align: right; float: right; position: relative; margin-top: 25px; border: 1px solid #fff; max-width: 540px; max-height: 100px; overflow: hidden; }
+#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }
+#logoctr { display: none; }
+#logo:hover #logoctr, #logo.edit #logoctr { display: block; text-align: right; line-height: 25px; background: #eee; padding: 0 5px; }
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+#meta td.meta-head { text-align: left; background: #eee; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+
+#items { clear: both; width: 100%; margin: 30px 0 0 0; border: 1px solid black; }
+#items th { background: #eee; }
+#items textarea { width: 80px; height: 50px; }
+#items tr.item-row td { border: 0; vertical-align: top; }
+#items td.description { width: 300px; }
+#items td.item-name { width: 175px; }
+#items td.description textarea, #items td.item-name textarea { width: 100%; }
+#items td.total-line { border-right: 0; text-align: right; }
+#items td.total-value { border-left: 0; padding: 10px; }
+#items td.total-value textarea { height: 20px; background: none; }
+#items td.balance { background: #eee; }
+#items td.blank { border: 0; }
+
+#terms { text-align: center; margin: 20px 0 0 0; }
+#terms h5 { text-transform: uppercase; font: 13px Helvetica, Sans-Serif; letter-spacing: 10px; border-bottom: 1px solid black; padding: 0 0 8px 0; margin: 0 0 8px 0; }
+#terms textarea { width: 100%; text-align: center;}
+
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:white; }
+</style>
+</head>
+<body style="background-image:url('img/Invoice.jpg')">
+    <form id="form1">
+	    <div id="page-wrap">
+        <input id="header" text="INVOICE" ReadOnly="true"></input>
+		
+		<div id="identity" style=" padding-left:3em;">
+            
+        <textarea id="address" ReadOnly="true">EduSmart Pvt. Ltd.
+Silver Park,
+Mira Road (E), 
+Thane - 401107
+                  
+Phone: +91 9819973128</textarea>
+
+            <div align="right" style="padding-top:3em; padding-right:3em;">
+                <img id="image" src="img/logo.png" alt="logo"/> 
+            </div>
+		 
+		</div>
+		
+		<div style="clear:both"></div>
+		
+		<div id="customer" style=" padding-left:2em;">
+            <textarea id="customer-title">ParFer Tech Corp.</textarea>
+
+            <table id="meta">
+                <tr>
+                    <td class="meta-head">Invoice #</td>
+                    <td><input id="textBox4" style="border:none;" ReadOnly="true">000001</input></td>
+                </tr>
+                <tr>
+
+                    <td class="meta-head">Date</td> 
+                    <td><input id="date" style="border:none;" ReadOnly="true">August 29, 2020</input></td>
+                </tr>
+                <tr>
+                    <td class="meta-head">Amount Due</td>
+                    <td><div class="due">₹14,160</div></td>
+                </tr>
+
+            </table>
+		
+		</div>
+		
+		<table id="items">
+		
+		  <tr>
+		      <th style="width:500px;">Course</th>
+		      <th>Fees</th>
+		      <th>Tax</th>
+		      <th colspan="2">Total Amount</th>
+		  </tr>
+		  
+		  <tr class="item-row">
+		      <td class="description"><textarea id="textBox1" style="border:none; " ReadOnly="true" text="">EduSmart Computer Course (Duration : 3 months)</textarea></td>
+		      <td><textarea id="textBox2" class="cost" style="border:none;" ReadOnly="true" text="">₹12,000</textarea></td>
+		      <td><input id="textBox3" class="qty" style="border:none;" ReadOnly="true"></input></td>
+		      <td><span class="price">₹12,000</span></td>
+		  </tr>
+		  
+		  <tr class="item-row">
+		      <td class="description"><textarea id="textBox5" style="border:none; " ReadOnly="true" text="">GST & other Tax</textarea></td>
+		      <td><input id="textBox6" class="cost" style="border:none;" ReadOnly="true" text=""></input></td>
+		      <td><textarea id="textBox7" class="qty" style="border:none;" ReadOnly="true" text="">18%</textarea></td>
+		      <td>  </td>
+		  </tr>
+		  
+		  <tr id="hiderow">
+		    <td colspan="5"></td>
+		  </tr>
+		  
+		  <tr>
+		      <td colspan="2" class="blank"></td>
+		      <td colspan="2" class="total-line">Subtotal</td>
+		      <td class="total-value"><div id="subtotal">₹14,160</div></td>
+		  </tr>
+		  <tr>
+
+		      <td colspan="2" align="center" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="blank"><img id="image" src="img/logo.png" alt="logo" /><br />Pvt. Ltd.</td>
+		      <td colspan="2" class="total-line">Total</td>
+		      <td class="total-value"><div id="total">₹14,160</div></td>
+		  </tr>
+		  <tr>
+		      <td colspan="2" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:16px;" class="blank" align="center">ParFer Tech Corp.</td>
+		      <td colspan="2" class="total-line">Amount Paid</td>
+		      <td class="total-value"><div id="paid">₹00.00</div></td>
+		  </tr>
+		  <tr>
+		      <td colspan="2" class="blank"> </td>
+		      <td colspan="2" class="total-line balance">Balance Due</td>
+		      <td class="total-value balance"><div class="due">₹14,160</div></td>
+		  </tr>
+		
+		</table>
+		
+		<div id="terms"> 
+		  <h5>Terms</h5>
+            <input id="textBox8" style="border:none;" ReadOnly="true">NET 30 Days. Finance Charge of 10% will be made on unpaid balances after 30 days.</input>
+        </div>
+        </div>
+    </form>
+    <script>
+        var doPrintPage;
+        function printPage(){
+            window.print();
+        }
+        window.onload = function () {
+        doPrintPage = setTimeout('printPage();', 5000);
+        }
+    </script>
+		</div>
+
+	<!-- /Demo content -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+</body>
+</html>
